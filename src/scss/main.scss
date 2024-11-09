@@ -1,0 +1,8 @@
+// базовые подключения
+@use 'vars';
+@use 'fonts';
+@use 'global';
+
+// подключения компонентов страницы
+
+@use './components/style';

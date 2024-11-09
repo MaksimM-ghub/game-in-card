@@ -1,4 +1,12 @@
 import { Card } from "./card.js";
+import zenit from "../../images/zenit.jpg";
+import barselona from "../../images/barselona.jpg";
+import bayer from "../../images/bayer.jpg";
+import borussia from "../../images/borussia.jpg";
+import liverpool from "../../images/liverpool.jpg";
+import psg from "../../images/psg.jpg";
+import real from "../../images/real.jpg";
+import defaultImg from "../../images/default.jpg";
 
 export class AmazingCard extends Card {
   #cardNumber;
@@ -13,13 +21,13 @@ export class AmazingCard extends Card {
   set cardNumber(value) {
     this.#cardNumber = value;
     const imgArray = [
-      "../images/zenit.jpg",
-      "../images/barselona.jpg",
-      "../images/bayer.jpg",
-      "../images/borussia.jpg",
-      "../images/liverpool.jpg",
-      "../images/psg.jpg",
-      "../images/real.jpg",
+      zenit,
+      barselona,
+      bayer,
+      borussia,
+      liverpool,
+      psg,
+      real,
     ];
 
     this.#img = document.createElement("img");
@@ -27,7 +35,7 @@ export class AmazingCard extends Card {
     this.#img.classList.add("images-card");
 
     this.#img.addEventListener("error", () => {
-      this.#img.src = "../images/default.jpg";
+      this.#img.src = defaultImg;
       this.#img.classList.add("images-error-card");
     });
 
